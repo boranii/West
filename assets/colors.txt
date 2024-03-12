@@ -1,0 +1,5 @@
+FFDBE0 icon background
+FF5069 main color (Button color)
+FFEBEE background
+FFB431 star button background
+E94057 navigation selected icon
