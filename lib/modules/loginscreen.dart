@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:west/abdullah/number.dart';
 import 'package:west/shared/components/components.dart';
 import '../shared/style/colors.dart';
 
@@ -21,7 +22,12 @@ class LoginScreen extends StatelessWidget {
               defultButton(
                 background: MainColor,
                 context: context,
-                text: 'Continue',),
+                text: 'Continue',
+                  pagename: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => Mynumber()));
+                  }
+              ),
               SizedBox(height: 20,),
               Text("OR"),
               SizedBox(height: 20,),
@@ -31,7 +37,7 @@ class LoginScreen extends StatelessWidget {
                 context: context,
                 text: 'Login with Facebook',
                 logo: "assets/Facebook.svg",
-                textcolor: Colors.black
+                textcolor: Colors.black, pagename: () {  }
               ),
               SizedBox(height: 20,),
               primaryButton(
@@ -40,8 +46,8 @@ class LoginScreen extends StatelessWidget {
                   context: context,
                   text: 'Login with Google',
                   logo: "assets/Google.svg",
-                  textcolor: Colors.black
-              ),
+                  textcolor: Colors.black,
+    pagename:(){}),
               SizedBox(height: 60,),
               SignUp(),
             ]),

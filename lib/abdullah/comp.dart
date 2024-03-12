@@ -100,15 +100,13 @@ Widget inputtext({
 }) =>
     Container(
 
-      width: 350,
+      width: 300,
       height: 60,
       child: TextFormField(
-        decoration: const InputDecoration(fillColor:Colors.white,filled: true,
+        cursorColor:MainColor ,
 
-          focusedBorder: UnderlineInputBorder(
-
-            borderSide: BorderSide.none,
-          ),
+        decoration: InputDecoration(fillColor:Colors.white,filled: true,focusColor: MainColor,
+          border:UnderlineInputBorder(borderRadius: BorderRadius.circular(50),),
         ),
 
       ),);

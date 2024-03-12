@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:west/modules/loginscreen.dart';
-import 'modules/getstartedscreen.dart';
-import 'modules/mynumberisscreen.dart';
-import 'modules/mynumberisscreen2.dart';
 import 'modules/splashscreen.dart';
 import 'shared/style/colors.dart';
 
@@ -30,7 +25,7 @@ class MyApp extends StatelessWidget {
 
           )
       ),
-      home: MyNumber2Screen()
+      home: SplashScreen()
     );
   }
 }

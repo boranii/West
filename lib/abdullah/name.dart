@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:west/shared/components/components.dart';
 
 import '../shared/componens/comonent.dart';
 import '../shared/styles/color.dart';
+import 'comp.dart';
 class Yourname extends StatelessWidget {
   const Yourname({Key? key}) : super(key: key);
 

@@ -45,19 +45,7 @@ class GetStartedScreen extends StatelessWidget {
             Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
           },),
           SizedBox(height: 10,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children:[
-              Text(
-                "Don’t have an account?"
-                ,style: TextStyle(
-                  fontWeight: FontWeight.bold)
-                ,),
-              SignUp(),
-
-            ],
-
-          ),
+          SignUp(),
         ],
       ),
       

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:west/modules/mynumberisscreen2.dart';
+import 'package:west/shared/components/components.dart';
 
-import '../shared/componens/comonent.dart';
-import '../shared/styles/color.dart';
+import '../shared/style/colors.dart';
 class Mynumber extends StatelessWidget {
   const Mynumber({Key? key}) : super(key: key);
 
@@ -12,7 +12,7 @@ class Mynumber extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Icon(Icons.arrow_back,color: Colors.black,),
-        title: progras(
+        title: progress(
             width: 22.5
         ),
       ),
@@ -30,14 +30,17 @@ class Mynumber extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
                 child: Text("We'll need your phone number to send an OTP for verification.",style: TextStyle(fontSize:15),),),
               SizedBox(height: 20,),
-              inputphone(),
+              phoneform(),
               SizedBox(height: 20,),
-              defButton(
-                Color: maincolor,
-                text: 'continue',ColorText:Colors.white ,
-                function: (){
-
-                },),
+              defultButton(
+                background: MainColor,
+                context: context,
+                text: 'Continue',
+                  pagename: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => MyNumber2Screen()));
+                  }
+              ),
               SizedBox(height: 100,),
               Container(
                   child:SvgPicture.asset("assets/num1.svg",)

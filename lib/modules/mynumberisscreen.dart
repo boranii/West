@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:west/modules/mynumberisscreen2.dart';
 
 import '../abdullah/comp.dart';
 import '../shared/components/components.dart';
@@ -12,7 +13,6 @@ class MyNumberScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
     appBar: AppBar(
-    leading: Icon(Icons.arrow_back,color: Colors.black,),
     title:
     progress(
     width: 22.5
@@ -35,7 +35,12 @@ class MyNumberScreen extends StatelessWidget {
         defultButton(
         background: MainColor,
         context: context,
-        text: 'Continue',),
+        text: 'Continue',
+            pagename: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => MyNumber2Screen()));
+            }
+        ),
         SizedBox(height: 20,),
         Container(
         child:SvgPicture.asset("assets/NumberPageLine.svg",)

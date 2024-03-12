@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pinput/pinput.dart';
+import 'package:west/modules/yournamescreen.dart';
 import 'package:west/shared/components/components.dart';
 
 import '../shared/style/colors.dart';
@@ -12,7 +13,6 @@ class MyNumber2Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back,color: Colors.black,),
         title:
         progress(
             width: 30.5
@@ -75,7 +75,13 @@ class MyNumber2Screen extends StatelessWidget {
               defultButton(
                 background: MainColor,
                 context: context,
-                text: 'Verify',),
+                text: 'Verify',
+                  pagename: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => YourNameScreen()));
+                  }
+
+              ),
               SizedBox(height: 60,),
 
               Container(
